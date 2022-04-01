@@ -158,12 +158,12 @@ class DynamoDbController extends Controller
 
         $columns = [
             'full_name' => $this->faker->name,
-            'info' => [
+            'info' => json_encode([
                 'title' => $this->faker->title,
                 'email' => $this->faker->email,
                 'phone' => $this->faker->phoneNumber,
                 'year' => $this->faker->year,
-            ]
+            ])
         ];
 
         // Update expression for partial update
